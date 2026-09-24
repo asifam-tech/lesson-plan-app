@@ -1,9 +1,9 @@
-const { pool } = require('../config/db');
+ const { pool } = require('../config/db');
 
-/**
- * Returns counts by status, scoped to the requester's department
- * (department head) or system-wide (director).
- */
+
+//  * Returns counts by status, scoped to the requester's department
+//  * (department head) or system-wide (director).
+ 
 async function getSummary(req, res) {
   try {
     const { role, department } = req.user;
