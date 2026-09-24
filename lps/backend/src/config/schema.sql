@@ -1,10 +1,6 @@
 -- Lesson Plan Approval System — Schema
--- Run via `npm run migrate`, or execute this file directly against MySQL.
-
-CREATE DATABASE IF NOT EXISTS lesson_plan_system
-  CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-
-USE lesson_plan_system;
+-- Run via `npm run migrate` against the database configured in environment variables.
+-- The managed database itself should already exist; this migration creates the tables.
 
 -- ---------------------------------------------------------------------
 -- users
