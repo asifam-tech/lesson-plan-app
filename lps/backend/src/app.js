@@ -20,8 +20,8 @@ app.use(cors({
 }));
 
 // app.use(cors({ origin: process.env.CLIENT_URL || 'http://localhost:5173' }));
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
+  app.use(express.json());
+  app.use(express.urlencoded({ extended: true }));
 
 // Serve uploaded lesson plan files
 app.use('/uploads', express.static(path.join(__dirname, '..', process.env.UPLOAD_DIR || 'uploads')));
