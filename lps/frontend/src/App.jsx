@@ -4,6 +4,7 @@ import ProtectedRoute, { roleHome } from './components/ProtectedRoute';
 
 import Login from './pages/Login';
 import Register from './pages/Register';
+import Home from './pages/Home';
 import TeacherDashboard from './pages/TeacherDashboard';
 import CreateLesson from './pages/CreateLesson';
 import UploadLesson from './pages/UploadLesson';
@@ -19,7 +20,7 @@ import Reports from './pages/Reports';
 function HomeRedirect() {
   const { user, loading } = useAuth();
   if (loading) return null;
-  if (!user) return <Navigate to="/login" replace />;
+  if (!user) return <Home />;
   return <Navigate to={`/${roleHome(user.role)}`} replace />;
 }
 

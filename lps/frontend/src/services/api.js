@@ -1,15 +1,7 @@
 import axios from 'axios';
 
-// Vite only exposes frontend environment variables prefixed with VITE_.
-// In production, set VITE_API_URL in Vercel to:
-// https://lesson-plan-app-67or.onrender.com/api
-const API_URL = (
-  import.meta.env.VITE_API_URL ||
-  'https://lesson-plan-app-67or.onrender.com/api'
-).replace(/\/+$/, '');
-
 const api = axios.create({
-  baseURL: API_URL,
+  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:5000/api',
 });
 
 // Attach the JWT to every request once the user is logged in.
